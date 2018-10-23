@@ -4,3 +4,26 @@
 .news img{
     width:100px;
 }
+.title {
+    height: 44px;
+
+    line-height: 44px;
+
+    text-align: center;
+
+    background: #000;
+
+    color:#fff;
+}
+.list li{
+
+    line-height: 40px;
+}
+.list{
+
+    padding: 10px;
+}
+.title imput{
+
+    height: 40px;
+}
