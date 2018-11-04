@@ -1,7 +1,8 @@
 import React from 'react';
-import '../assets/css/index.css'
+import '../assets/css/index.css';
 //引入自定义模块
-import storage from '../model/storage'
+import storage from '../model/storage';
+import  {Input} from 'antd';
 
 class Todolist01 extends React.Component {
     constructor (props) {
@@ -67,7 +68,9 @@ class Todolist01 extends React.Component {
     render (){
         return (
             <div>
-                <header className="title"> TodoList :   <input ref="title"  onKeyUp={this.addData}/> </header>
+                <header className="title">
+                    TodoList :<Input ref="title"  style={{width:'20%'}}  onKeyUp={this.addData}/>
+                </header>
 
 
 
@@ -80,7 +83,7 @@ class Todolist01 extends React.Component {
                             if(value.checked == false) {
                                 return (
                                     <li key={key}>
-                                        <input type="checkbox" onChange={() => this.changeCheck(key)} checked={false}></input>
+                                        <input type="checkbox" onChange={() => this.changeCheck(key)} checked={false}/>
                                         {value.title} ------
                                         <button onClick={() =>this.deleteData(key)}>删除</button>
                                     </li>
@@ -96,7 +99,7 @@ class Todolist01 extends React.Component {
                             if(value.checked == true) {
                                 return (
                                     <li key={key}>
-                                        <input type="checkbox" onChange={() => this.changeCheck(key)} checked={true}></input>
+                                        <input type="checkbox" onChange={() => this.changeCheck(key)} checked={true}/>
                                         {value.title} ------
                                         <button onClick={() =>this.deleteData(key)}>删除</button>
                                     </li>
