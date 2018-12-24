@@ -58,7 +58,7 @@ class New extends Component {
                     this.state.list3.map(function(value,key) {
 
                         return(<li key={key}>
-                            <Link to={`/User/Content/${value.aid}`} >路由传值--{value.title}</Link><br/>
+                            <Link to={`/User/Content/${value.aid}`} >路由传值----{value.title}</Link><br/>
                             {/*<Link to={`/Content/${value.aid}?aid=${value.aid}`} >get传值---{value.title}</Link>*/}
                         </li>);
                     })
